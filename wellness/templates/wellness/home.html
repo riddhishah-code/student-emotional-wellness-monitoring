@@ -1,0 +1,29 @@
+{% extends "wellness/base.html" %}
+{% block title %}Home | Student Wellness{% endblock %}
+{% block content %}
+<section class="hero">
+    <div>
+        <span class="badge">Django • Python • SQLite</span>
+        <h1>Student Emotional Wellness Monitoring System</h1>
+        <p>
+            A simple questionnaire-based system that checks student wellness,
+            provides mood-based suggestions and shows an analytical dashboard.
+        </p>
+        <div class="actions">
+            <a class="btn primary" href="{% url 'questionnaire' %}">Start Questionnaire</a>
+            <a class="btn secondary" href="{% url 'dashboard' %}">View Dashboard</a>
+        </div>
+    </div>
+    <div class="hero-card">
+        <div class="emoji">🌱</div>
+        <h3>Simple & Student Friendly</h3>
+        <p>Answer a few questions and get a basic wellness result.</p>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature"><b>📝 Questionnaire</b><span>Collect basic wellness responses.</span></div>
+    <div class="feature"><b>💡 Suggestions</b><span>Give simple suggestions based on score.</span></div>
+    <div class="feature"><b>📊 Dashboard</b><span>View weekly-style student records.</span></div>
+</section>
+{% endblock %}

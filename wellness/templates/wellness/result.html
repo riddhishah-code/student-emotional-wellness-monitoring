@@ -1,0 +1,32 @@
+{% extends "wellness/base.html" %}
+{% block title %}Result | Student Wellness{% endblock %}
+{% block content %}
+<div class="result-wrap">
+    <div class="result-card">
+        <span class="badge">Wellness Result</span>
+        <h1>Hello, {{ record.student_name }} 👋</h1>
+        <p class="muted">{{ record.course }}</p>
+        <p class="muted">This result is based on your responses from the past week.</p>
+
+        <div class="score">{{ record.score }}<small>/50</small></div>
+        <div class="mood">{{ record.mood }}</div>
+
+        <div class="suggestion">
+            <h3>💡 Suggestion</h3>
+            <p>{{ record.suggestion }}</p>
+        </div>
+
+        {% if record.feedback %}
+        <div class="feedback">
+            <h3>Your Feedback</h3>
+            <p>{{ record.feedback }}</p>
+        </div>
+        {% endif %}
+
+        <div class="actions center">
+            <a class="btn primary" href="{% url 'questionnaire' %}">Take Again</a>
+            <a class="btn secondary" href="{% url 'dashboard' %}">Dashboard</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
