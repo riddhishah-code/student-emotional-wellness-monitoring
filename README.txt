@@ -3,13 +3,6 @@ STUDENT EMOTIONAL WELLNESS MONITORING SYSTEM
 Beginner-friendly Django academic project.
 
 Questionnaire is based on experiences during the past week.
-Scoring uses simple Python if/elif/else logic.
-
-Score categories:
-40-50 -> Doing Well
-30-39 -> Mostly Okay
-20-29 -> May Need a Break
-0-19 -> Needs Support
 
 RUN:
 python -m venv venv
